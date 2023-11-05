@@ -1,0 +1,97 @@
+use std::thread;
+use std::time::{Instant};
+
+// number of elements in array
+const MAX: usize = 1_000_000;
+
+// array of size MAX
+static mut A: [i32; MAX] = [0; MAX];
+
+fn merge(low: usize, mid: usize, high: usize) {
+    let mut left = Vec::with_capacity(mid - low + 1);
+    let mut right = Vec::with_capacity(high - mid);
+
+    for i in low..=mid {
+        left.push(unsafe { A[i] });
+    }
+
+    for i in mid + 1..=high {
+        right.push(unsafe { A[i] });
+    }
+
+    let mut i = 0;
+    let mut j = 0;
+    let mut k = low;
+
+    while i < left.len() && j < right.len() {
+        if left[i] <= right[j] {
+            unsafe {
+                A[k] = left[i];
+            }
+            i += 1;
+        } else {
+            unsafe {
+                A[k] = right[j];
+            }
+            j += 1;
+        }
+        k += 1;
+    }
+
+    while i < left.len() {
+        unsafe {
+            A[k] = left[i];
+        }
+        i += 1;
+        k += 1;
+    }
+
+    while j < right.len() {
+        unsafe {
+            A[k] = right[j];
+        }
+        j += 1;
+        k += 1;
+    }
+}
+
+fn merge_sort(low: usize, high: usize) {
+    if low < high {
+        let mid = low + (high - low) / 2;
+        let left_low = low;
+        let left_high = mid;
+        let right_low = mid + 1;
+        let right_high = high;
+
+        let left_thread = thread::spawn(move || merge_sort(left_low, left_high));
+        let right_thread = thread::spawn(move || merge_sort(right_low, right_high));
+
+        left_thread.join().unwrap();
+        right_thread.join().unwrap();
+
+        merge(low, mid, high);
+    }
+}
+
+fn main() {
+    // Generating random values in array
+    for i in 0..MAX {
+        unsafe {
+            A[i] = rand::random::<i32>() % 100;
+        }
+    }
+
+    // Timing the merge sort algorithm
+    let start_time = Instant::now();
+
+    merge_sort(0, MAX - 1);
+
+    let end_time = Instant::now();
+
+    // Displaying sorted array (commented out to avoid excessive output)
+    // println!("Sorted array: {:?}", unsafe { &A });
+
+    // Calculating and printing the time taken in seconds
+    let elapsed_time = end_time - start_time;
+    println!("Time taken: Serial: {} seconds", elapsed_time.as_secs_f64());
+}
