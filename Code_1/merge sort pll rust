@@ -125,4 +125,5 @@ fn main() {
     // Calculating and printing the time taken in seconds
     let elapsed_time = end_time - start_time;
     println!("Time taken: Parallel: {} seconds", elapsed_time.as_secs_f64());
+    unsafe {println!("Array: {:?}", A);}
 }
