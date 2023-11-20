@@ -3,12 +3,11 @@
 ### 1) Problem Statement:
 
 #### Original Statement:
-The project aims to explore and compare parallel programming features in Rust and C++, focusing on algorithms like mergesort and matrix multiplication. It involves analyzing the performance of parallel vs. serial execution using Rust's Rayon and C++'s OpenMP.
+The project aims to explore and compare parallel programming features in Rust and C++, focusing on algorithms like mergesort, sum and root. It involves analyzing the performance of parallel vs. serial execution using Rust's Rayon and C++'s OpenMP.
 
 #### POPL Angle:
 - **POPL Involvement:** The POPL angle in this project lies in the application of parallel programming concepts, which are often discussed theoretically in Principles of Programming Languages (POPL) courses.
-- **Uniqueness:** While parallel programming has been explored, our project differentiates itself by specifically comparing Rust and C++ in parallel computation, providing practical insights.
-
+- **Uniqueness:** While parallel programming has been explored, our project differentiates itself by specifically comparing Rust and C++ in parallel computation.
 ### 2) Software Architecture:
 
 #### Architecture Overview:
@@ -42,17 +41,17 @@ The project aims to explore and compare parallel programming features in Rust an
 #### Implementation Points:
 
 1. **Thread Creation (Rust):**
-   - **Lines of Code:** [Rust Code - Lines 59-65]
+   - **Lines of Code:** [Rust Code - Lines 105-115]
    - **POPL Aspect:** Illustrates Rust's native thread creation for parallel execution.
    - **Experience:** Ensuring proper thread management and synchronization to prevent data race conditions was challenging. Rust's ownership model helped in avoiding common pitfalls.
 
 2. **Mutex Usage (Rust):**
-   - **Lines of Code:** [Rust Code - Lines 22-23, 60-62]
+   - **Lines of Code:** [Rust Code - Lines 80-92]
    - **POPL Aspect:** Demonstrates the application of mutexes to control thread access.
    - **Experience:** Implementing mutexes was crucial to prevent concurrent modification of shared data. Balancing data access and avoiding deadlocks required careful consideration.
 
 3. **Parallel Sorting (Rayon):**
-   - **Lines of Code:** [Rust Code - Lines 42-45]
+   - **Lines of Code:** [Rust Code - Lines 80-115]
    - **POPL Aspect:** Applies the Rayon library for parallel sorting.
    - **Experience:** Integrating an external library for parallelism involved understanding and managing the library's internal parallelization strategy. It required adapting the algorithm to fit the library's paradigm.
 
