@@ -91,10 +91,6 @@ The project aims to explore and compare parallel programming features in Rust an
 - **Dataset:** Randomly generated arrays of integers or doubles.
 - **Benchmarks:** Execution time measured for each algorithm and parallel implementation.
 
-#### Graphs and Output:
-- Graphs showing the comparative results of serial and parallel execution.
-- Output traces indicating sorted arrays and relevant statistics.
-
 #### Validation:
 - Ensure consistency with the initial problem statement by validating:
   - Performance improvements in parallel execution.
