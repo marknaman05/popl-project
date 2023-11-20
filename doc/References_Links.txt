@@ -1,0 +1,2 @@
+https://docs.rs/rayon/latest/rayon/
+https://doc.rust-lang.org/book/ch16-01-threads.html
