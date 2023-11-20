@@ -119,3 +119,81 @@ The project aims to explore and compare parallel programming features in Rust an
 - **Advanced POPL Concepts:** Integrate advanced POPL concepts for enhanced parallelism.
 
 ---
+
+Sure, let's break down the steps to run the provided Rust and C++ codes:
+
+### Rust Codes:
+
+#### Prerequisites:
+1. Rust installed on your machine. If not, you can install it from [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install).
+
+#### Steps:
+
+##### For "parallel_merge_sort.rs":
+1. Open a terminal.
+2. Navigate to the directory containing "parallel_merge_sort.rs".
+3. Run the command:
+   ```bash
+   cargo run --release
+   ```
+
+##### For "parallel_sort_rayon.rs":
+1. Open a terminal.
+2. Navigate to the directory containing "parallel_sort_rayon.rs".
+3. Run the command:
+   ```bash
+   cargo run --release
+   ```
+
+##### For "parallel_vector_creation.rs":
+1. Open a terminal.
+2. Navigate to the directory containing "parallel_vector_creation.rs".
+3. Run the command:
+   ```bash
+   cargo run --release
+   ```
+
+### C++ Codes:
+
+#### Prerequisites:
+1. C++ compiler installed on your machine. If not, you can install GCC or another suitable compiler.
+
+#### Steps:
+
+##### For "merge_sort.cpp":
+1. Open a terminal.
+2. Navigate to the directory containing "merge_sort.cpp".
+3. Compile the code:
+   ```bash
+   g++ merge_sort.cpp -o merge_sort -std=c++11
+   ```
+4. Run the compiled executable:
+   ```bash
+   ./merge_sort
+   ```
+
+##### For "parallel_merge_sort.cpp":
+1. Open a terminal.
+2. Navigate to the directory containing "parallel_merge_sort.cpp".
+3. Compile the code:
+   ```bash
+   g++ parallel_merge_sort.cpp -o parallel_merge_sort -std=c++11 -pthread
+   ```
+4. Run the compiled executable:
+   ```bash
+   ./parallel_merge_sort
+   ```
+
+##### For "parallel_sort.cpp":
+1. Open a terminal.
+2. Navigate to the directory containing "parallel_sort.cpp".
+3. Compile the code:
+   ```bash
+   g++ parallel_sort.cpp -o parallel_sort -std=c++11 -pthread
+   ```
+4. Run the compiled executable:
+   ```bash
+   ./parallel_sort
+   ```
+
+These instructions assume a Unix-like terminal environment. For Windows, the commands and compilation steps may differ. Adjust accordingly based on your operating system.
