@@ -1,0 +1,8 @@
+https://docs.rs/rayon/latest/rayon/
+https://doc.rust-lang.org/book/ch16-01-threads.html
+
+WORK SPLIT:
+Saahir Vaidya -- worked on Code 1
+Mohammed Aman -- worked on Code 1
+Ashray Kashyap -- worked on Code 2
+Naman Markhedkar -- worked on Code 3, 4
