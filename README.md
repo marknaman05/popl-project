@@ -1,6 +1,6 @@
 ## Project README
 
-### 1) Problem Statement:
+### 1) Problem Statement:   
 
 #### Original Statement:
 The project aims to explore and compare parallel programming features in Rust and C++, focusing on algorithms like mergesort, sum and root. It involves analyzing the performance of parallel vs. serial execution using Rust's Rayon and C++'s OpenMP.
