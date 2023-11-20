@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/mohammedaman/Desktop/4-1/POPL/Project/code-orig/Code_4",
+      "program": "/Users/mohammedaman/Desktop/4-1/POPL/Project/code-orig/Code_4/build/Debug/outDebug"
+    }
+  ]
+}
