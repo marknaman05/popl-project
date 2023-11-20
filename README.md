@@ -102,10 +102,10 @@ The project aims to explore and compare parallel programming features in Rust an
 
 ### 5) Potential for Future Work:
 
-#### Future Work Aspects:
-- **Optimizations:** Explore further optimizations for parallel algorithms.
-- **Additional Algorithms:** Implement and compare additional parallel algorithms.
-- **Advanced POPL Concepts:** Integrate advanced POPL concepts for enhanced parallelism.
+#### Potential Future Directions:
+- **Optimization Strategies:** Investigate additional avenues for optimizing parallel algorithms.
+- **Diversify Algorithms:** Implement and compare a broader spectrum of parallel algorithms.
+- **Incorporate Advanced POPL Concepts:** Integrate sophisticated POPL concepts to elevate the level of parallelism.
 
 ### Rust Codes:
 
