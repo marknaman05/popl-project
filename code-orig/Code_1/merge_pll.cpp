@@ -129,6 +129,7 @@ int main()
     for(int i= 0; i < MAX; i++){
       cout << a[i] << ", ";
     }
+    cout<<""<<endl;
     // time taken by merge sort in seconds
     cout << "Time taken: Parallel : " << (t2 - t1) /
               (double)CLOCKS_PER_SEC << endl;

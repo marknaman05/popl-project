@@ -1,7 +1,0 @@
-21a22,23
-> #pragma omp parallel for
-> 
-32c34
-<     cout << " Time required to run in serial : " << t2 - t1 << "ms"
----
->     cout << " Time required to run in parallel : " << t2 - t1 << "ms"
